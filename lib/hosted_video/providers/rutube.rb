@@ -9,6 +9,10 @@ module HostedVideo
         JSON.load(open("http://rutube.ru/api/video/#{vid}/?format=json"))['thumbnail_url']
       end
 
+      def url_for_iframe
+        "http://rutube.ru/video/embed/#{vid}"
+      end
+
       private
 
       def vid_regex
