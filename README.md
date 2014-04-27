@@ -1,6 +1,7 @@
-# HostedVideo
+hosted_video
+============
 
-TODO: Write a gem description
+Ruby gem for parsing urls to determine video hostings and get video details.
 
 ## Installation
 
@@ -18,7 +19,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+video = HostedVideo.from_url('http://www.youtube.com/watch?v=TBKN7_vx2xo')
+video.vid         # => "TBKN7_vx2xo"
+video.preview     # => "http://img.youtube.com/vi/TBKN7_vx2xo/hqdefault.jpg"
+video.iframe_code # => "<iframe width='420' height='315' frameborder='0' src='http://www.youtube.com/embed/TBKN7_vx2xo?wmode=transparent'></iframe>"
+```
 
 ## Contributing
 

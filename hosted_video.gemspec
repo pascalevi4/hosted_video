@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = HostedVideo::VERSION
   spec.authors       = ["Vadim Alekseev"]
   spec.email         = ["vadim.alekseev777@gmail.com"]
-  spec.description   = "desc"
-  spec.summary       = "summary"
+  spec.description   = "Tool for parse video links to determine hosting and build iframe code"
+  spec.summary       = "Parsing video links"
   spec.homepage      = ""
   spec.license       = "MIT"
 
