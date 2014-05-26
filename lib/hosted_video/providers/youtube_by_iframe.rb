@@ -1,9 +1,9 @@
 module HostedVideo
   module Providers
-    class Youtube < Base
+    class YoutubeByIframe < Base
 
       def self.can_parse?(url)
-        url =~ /(youtube\.com\/watch\?v=)|(youtu\.be\/)/
+        url =~ /youtube\.com\/embed\/[\w,-]{11}(\?.*)?/
       end
 
       def preview
@@ -17,7 +17,7 @@ module HostedVideo
       private
 
       def vid_regex
-        /(https?:\/\/)?(www\.)?((youtube\.com)|(youtu\.be))\/(watch\?v=)?(?<id>[\w,-]{11}).*/
+        /youtube\.com\/embed\/(?<id>[\w,-]{11})(\?.*)?/
       end
     end
   end
