@@ -28,6 +28,37 @@ video.preview     # => "http://img.youtube.com/vi/TBKN7_vx2xo/hqdefault.jpg"
 video.iframe_code # => "<iframe width='420' height='315' frameborder='0' src='http://www.youtube.com/embed/TBKN7_vx2xo?wmode=transparent'></iframe>"
 ```
 
+You can create your own video service providers by inheriting from HostedVideo::Providers::Base and implementing parsing functions:
+```ruby
+class MyProvider < HostedVideo::Providers::Base
+  # logic to determine your service
+  def self.can_parse?(url)
+    url =~ /myprovider\.com\/\d{3}.*/
+  end
+
+  # how to get preview image
+  def preview
+    "http://myprovider.ru/api/video/#{vid}/?preview=true")
+  end
+
+  def url_for_iframe
+    "http://rutube.ru/video/embed/#{vid}"
+  end
+
+  private
+  # regular expression for getting video id from link
+  def vid_regex
+    /(https?:\/\/)?(www\.)?rutube\.ru\/video\/(?<id>\w{32}|\w{7}).*/
+  end
+end
+
+HostedVideo.configure do |c|
+  c.additional_providers += [MyProvider]
+end
+```
+Please send me pull-requests with your providers or write an issue with pasted code.
+
+
 ## Contributing
 
 1. Fork it
