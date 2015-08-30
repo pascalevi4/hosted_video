@@ -1,8 +1,8 @@
-require "open-uri"
-require "json"
-require "hosted_video/version"
-require "hosted_video/configuration"
-require "hosted_video/providers/base"
+require 'open-uri'
+require 'json'
+require 'hosted_video/version'
+require 'hosted_video/configuration'
+require 'hosted_video/providers/base'
 
 module HostedVideo
   class InvalidUrlError < StandardError; end
@@ -29,8 +29,9 @@ module HostedVideo
     end
 
     private
+
     def find_provider(url)
-      configuration.providers.detect { |p| p.can_parse?(url) }
+      configuration.providers.detect { |provider| provider.can_parse?(url) }
     end
   end
 end

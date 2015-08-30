@@ -13,4 +13,3 @@ module HostedVideo
     end
   end
 end
-

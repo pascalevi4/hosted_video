@@ -1,7 +1,6 @@
 module HostedVideo
   module Providers
     class YoutubeByIframe < Youtube
-
       def self.can_parse?(url)
         url =~ /youtube\.com\/embed\/[\w,-]{11}(\?.*)?/
       end

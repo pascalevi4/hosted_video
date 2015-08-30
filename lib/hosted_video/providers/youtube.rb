@@ -1,7 +1,6 @@
 module HostedVideo
   module Providers
     class Youtube < Base
-
       def self.can_parse?(url)
         url =~ /(youtube\.com\/watch\?v=)|(youtu\.be\/)/
       end

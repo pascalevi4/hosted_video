@@ -4,9 +4,9 @@ module HostedVideo
 
     def initialize
       @providers = Providers.constants
-                            .reject { |c| c == :Base }
-                            .map    { |c| Providers.const_get(c) }
-                            .select { |c| Class === c }
+                            .reject { |const| const == :Base }
+                            .map    { |const| Providers.const_get(const) }
+                            .select { |const| Class === const }
       @additional_providers = []
     end
 

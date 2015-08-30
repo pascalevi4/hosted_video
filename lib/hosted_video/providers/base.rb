@@ -17,7 +17,7 @@ module HostedVideo
 
       def iframe_code(attributes = {})
         attrs = default_iframe_attributes.merge(attributes)
-        "<iframe #{attrs.map{|key, val| "#{key}='#{val}'"}.join(' ')} src='#{url_for_iframe}'></iframe>"
+        "<iframe #{attrs.map { |key, val| "#{key}='#{val}'" }.join(' ')} src='#{url_for_iframe}'></iframe>"
       end
 
       private
