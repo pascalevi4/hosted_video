@@ -1,7 +1,7 @@
 hosted_video
 ============
 [![Gem Version](https://badge.fury.io/rb/hosted_video.svg)](http://badge.fury.io/rb/hosted_video)
-[![Code Climate](https://codeclimate.com/github/pascalevi4/hosted_video.png)](https://codeclimate.com/github/pascalevi4/hosted_video)
+[![Code Climate](https://codeclimate.com/github/pascalevi4/hosted_video/badges/gpa.svg)](https://codeclimate.com/github/pascalevi4/hosted_video)
 [![Build Status](https://travis-ci.org/pascalevi4/hosted_video.svg?branch=master)](https://travis-ci.org/pascalevi4/hosted_video)
 
 Ruby gem for parsing urls to determine video hostings and get video details. Youtube, Rutube and Vimeo services are supported.
