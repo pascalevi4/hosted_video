@@ -6,11 +6,11 @@ module HostedVideo
       end
 
       def preview
-        "http://img.youtube.com/vi/#{vid}/hqdefault.jpg"
+        "https://img.youtube.com/vi/#{vid}/hqdefault.jpg"
       end
 
       def url_for_iframe
-        "http://www.youtube.com/embed/#{vid}?wmode=transparent"
+        "https://www.youtube.com/embed/#{vid}?wmode=transparent"
       end
 
       private

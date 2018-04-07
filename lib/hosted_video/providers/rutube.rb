@@ -6,11 +6,11 @@ module HostedVideo
       end
 
       def preview
-        JSON.load(open("http://rutube.ru/api/video/#{vid}/?format=json"))['thumbnail_url']
+        JSON.load(open("https://rutube.ru/api/video/#{vid}/?format=json"))['thumbnail_url']
       end
 
       def url_for_iframe
-        "http://rutube.ru/video/embed/#{vid}"
+        "https://rutube.ru/video/embed/#{vid}"
       end
 
       private

@@ -6,11 +6,11 @@ module HostedVideo
       end
 
       def preview
-        JSON.load(open("http://vimeo.com/api/v2/video/#{vid}.json")).first['thumbnail_large']
+        JSON.load(open("https://vimeo.com/api/v2/video/#{vid}.json")).first['thumbnail_large']
       end
 
       def url_for_iframe
-        "http://player.vimeo.com/video/#{vid}?api=0"
+        "https://player.vimeo.com/video/#{vid}?api=0"
       end
 
       private
